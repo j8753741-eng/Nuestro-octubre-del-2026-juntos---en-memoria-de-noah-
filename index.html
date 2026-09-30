@@ -384,6 +384,28 @@ h1{
         height:64px;
     }
 }
+
+    .paw.lit svg {
+    filter:
+        drop-shadow(0 0 5px rgba(255,215,150,.45))
+        drop-shadow(0 0 12px rgba(255,215,150,.22));
+    animation: softGlow 3s ease-in-out infinite;
+}
+
+@keyframes softGlow {
+    0%,100% {
+        filter:
+            drop-shadow(0 0 5px rgba(255,215,150,.4))
+            drop-shadow(0 0 10px rgba(255,215,150,.18));
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 8px rgba(255,215,150,.7))
+            drop-shadow(0 0 20px rgba(255,215,150,.35));
+    }
+}
+    
 </style>
 </head>
 
@@ -708,6 +730,15 @@ if(mesActual !== 10){
     }
 
 }
+
+    const intensidad = 0.20 + ((dia - 1) / 30) * 0.80;
+
+paw.style.setProperty(
+    "--paw-glow",
+    intensidad
+);
+
+paw.classList.add("lit");
 
 </script>
 
