@@ -5,10 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080b18">
 
-<title>Octubre · Donde cada huellita me lleva hasta ti y donde noah camina por nuestros días cuidándonos</title>
+<title>Octubre · Donde cada huellita me lleva hasta ti y donde Noah camina por nuestros días cuidándonos</title>
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap');
+
 
 *{
     box-sizing:border-box;
@@ -16,732 +18,1517 @@
     padding:0;
 }
 
+
 html{
     scroll-behavior:smooth;
 }
 
+
 body{
+
     min-height:100vh;
+
     background:
-        radial-gradient(circle at 50% 15%, rgba(255,210,150,.13), transparent 30%),
-        radial-gradient(circle at 20% 70%, rgba(80,100,180,.10), transparent 35%),
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(255,210,150,.13),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(80,100,180,.10),
+            transparent 35%
+        ),
+
         #070a15;
+
     color:#f7ead5;
+
     font-family:'Montserrat',sans-serif;
+
     overflow-x:hidden;
 }
 
-/* CAPA DE LUCES */
+
+/* =====================================================
+   PEQUEÑAS LUCES DEL FONDO
+===================================================== */
+
 body::before{
+
     content:"";
+
     position:fixed;
+
     inset:0;
+
     pointer-events:none;
+
     background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,.10) 0 1px, transparent 2px),
-        radial-gradient(circle at 80% 35%, rgba(255,220,170,.12) 0 1px, transparent 2px),
-        radial-gradient(circle at 55% 80%, rgba(255,255,255,.08) 0 1px, transparent 2px);
-    background-size:170px 190px,220px 230px,260px 280px;
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255,255,255,.10) 0 1px,
+            transparent 2px
+        ),
+
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(255,220,170,.12) 0 1px,
+            transparent 2px
+        ),
+
+        radial-gradient(
+            circle at 55% 80%,
+            rgba(255,255,255,.08) 0 1px,
+            transparent 2px
+        );
+
+    background-size:
+        170px 190px,
+        220px 230px,
+        260px 280px;
+
     opacity:.6;
+
+    z-index:-1;
 }
 
-/* CONTENEDOR */
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
 .page{
-    width:min(100%, 760px);
+
+    width:min(100%,760px);
+
     margin:auto;
-    padding:25px 14px 55px;
+
+    padding:
+        25px
+        14px
+        55px;
 }
 
-/* ENCABEZADO */
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
 .header{
+
     text-align:center;
+
     margin-bottom:22px;
-    animation:fadeDown 1.2s ease both;
+
+    animation:
+        fadeDown
+        1.2s
+        ease
+        both;
 }
+
 
 .mini{
+
     font-size:.66rem;
+
     letter-spacing:4px;
+
     text-transform:uppercase;
+
     color:#d9bd8b;
+
     margin-bottom:8px;
 }
 
+
 h1{
-    font-family:'Cormorant Garamond',serif;
-    font-size:clamp(2.8rem,13vw,5rem);
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(
+            2.8rem,
+            13vw,
+            5rem
+        );
+
     line-height:.85;
+
     font-weight:600;
+
     color:#f8dfb4;
-    text-shadow:0 4px 25px rgba(255,205,130,.18);
+
+    text-shadow:
+        0 4px 25px
+        rgba(255,205,130,.18);
 }
 
+
 .subtitle{
-    margin:13px auto 0;
-    max-width:390px;
-    font-family:'Cormorant Garamond',serif;
+
+    margin:
+        13px
+        auto
+        0;
+
+    max-width:430px;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
     font-size:1.18rem;
-    line-height:1.25;
+
+    line-height:1.3;
+
     color:#eadcc9;
 }
 
+
+.subtitle p{
+
+    margin-top:12px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size:.69rem;
+
+    line-height:1.7;
+
+    letter-spacing:.5px;
+
+    color:#cdbd9e;
+}
+
+
 .divider{
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:9px;
+
     margin-top:14px;
+
     color:#d9b67b;
 }
 
+
 .divider span{
+
     width:35px;
+
     height:1px;
-    background:rgba(217,182,123,.5);
+
+    background:
+        rgba(217,182,123,.5);
 }
 
-/* MARCO DE LA FOTO */
+
+/* =====================================================
+   MARCO DE LA FOTO
+===================================================== */
+
 .photo-area{
+
     position:relative;
+
     width:100%;
+
     margin:0 auto;
+
     padding:8px;
+
     border-radius:22px;
+
     background:
-        linear-gradient(145deg,
-        rgba(240,208,158,.65),
-        rgba(255,255,255,.12) 35%,
-        rgba(128,94,55,.6) 100%);
+
+        linear-gradient(
+            145deg,
+            rgba(240,208,158,.65),
+            rgba(255,255,255,.12) 35%,
+            rgba(128,94,55,.6) 100%
+        );
+
     box-shadow:
-        0 25px 70px rgba(0,0,0,.55),
-        0 0 35px rgba(255,207,145,.10);
-    animation:photoIn 1.4s ease both;
+
+        0 25px 70px
+        rgba(0,0,0,.55),
+
+        0 0 35px
+        rgba(255,207,145,.10);
+
+    animation:
+        photoIn
+        1.4s
+        ease
+        both;
 }
+
 
 .photo-inner{
+
     position:relative;
+
     overflow:hidden;
+
     border-radius:17px;
+
     background:#101522;
 }
 
+
 .photo-inner img{
+
     display:block;
+
     width:100%;
+
     height:auto;
+
     object-fit:cover;
 }
 
-/* BRILLO MUY SUTIL */
+
+/* Brillo sobre la fotografía */
+
 .photo-inner::after{
+
     content:"";
+
     position:absolute;
+
     inset:0;
+
     pointer-events:none;
-    background:linear-gradient(
-        135deg,
-        rgba(255,255,255,.08),
-        transparent 35%,
-        transparent 70%,
-        rgba(255,210,150,.06)
-    );
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.08),
+            transparent 35%,
+            transparent 70%,
+            rgba(255,210,150,.06)
+        );
 }
 
-/* ZONA DE HUELLAS */
+
+/* =====================================================
+   ZONA DEL CAMINO DE HUELLITAS
+===================================================== */
+
 .paw-zone{
+
     position:relative;
-    margin-top:25px;
-    min-height:850px;
-    padding:20px 5px;
+
+    margin-top:28px;
+
+    min-height:1050px;
+
+    padding:
+        20px
+        5px;
 }
 
-/* TEXTO */
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
 .instructions{
+
+    position:relative;
+
+    z-index:2;
+
     text-align:center;
+
     margin-bottom:10px;
-    animation:fadeUp 1.4s ease both;
+
+    animation:
+        fadeUp
+        1.4s
+        ease
+        both;
 }
+
 
 .instructions .small{
+
     font-size:.66rem;
+
     letter-spacing:2px;
+
     text-transform:uppercase;
+
     color:#bca889;
 }
 
+
 .instructions p{
+
     margin-top:6px;
-    font-family:'Cormorant Garamond',serif;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
     font-size:1.12rem;
+
     color:#eadcc9;
 }
 
-/* HUELLITAS */
-.paw{
+
+/* =====================================================
+   CONTENEDOR REAL DE LAS 31 HUELLITAS
+
+   MUY IMPORTANTE:
+   Todas las huellas viven aquí.
+   Cada una tendrá su propia posición.
+===================================================== */
+
+#paws{
+
     position:absolute;
-    width:58px;
-    height:58px;
-    border:0;
-    background:transparent;
-    cursor:pointer;
-    text-decoration:none;
-    display:none;
+
+    inset:0;
+
+    pointer-events:none;
+
     z-index:5;
-    -webkit-tap-highlight-color:transparent;
-    animation:pawAppear .9s cubic-bezier(.2,.8,.2,1) both;
 }
+
+
+/* =====================================================
+   CADA HUELLITA
+===================================================== */
+
+.paw{
+
+    position:absolute;
+
+    width:57px;
+
+    height:57px;
+
+    display:none;
+
+    border:0;
+
+    background:transparent;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    pointer-events:auto;
+
+    -webkit-tap-highlight-color:transparent;
+
+    transform:
+        translate(-50%,-50%)
+        rotate(var(--rotation));
+
+    opacity:0;
+
+    animation:
+        pawAppear
+        1s
+        cubic-bezier(.2,.8,.2,1)
+        forwards;
+}
+
+
+/* =====================================================
+   DIBUJO DE LA PATITA
+===================================================== */
 
 .paw svg{
+
     width:100%;
+
     height:100%;
+
     overflow:visible;
+
     filter:
-        drop-shadow(0 5px 9px rgba(0,0,0,.45))
-        drop-shadow(0 0 8px rgba(241,205,150,.16));
+
+        drop-shadow(
+            0 4px 7px
+            rgba(0,0,0,.5)
+        )
+
+        drop-shadow(
+            0 0 calc(5px * var(--glow))
+            rgba(255,215,150,.45)
+        )
+
+        drop-shadow(
+            0 0 calc(13px * var(--glow))
+            rgba(255,215,150,.18)
+        );
+
+    animation:
+        softGlow
+        3.8s
+        ease-in-out
+        infinite;
+
     transition:
-        transform .25s ease,
-        filter .25s ease;
+        transform .3s ease,
+        filter .3s ease;
 }
+
+
+/* =====================================================
+   EFECTO AL PASAR EL DEDO / CURSOR
+===================================================== */
 
 .paw:hover svg{
-    transform:scale(1.13) rotate(-5deg);
+
+    transform:
+        scale(1.15)
+        rotate(-5deg);
+
     filter:
-        drop-shadow(0 7px 12px rgba(0,0,0,.5))
-        drop-shadow(0 0 15px rgba(255,213,150,.4));
+
+        drop-shadow(
+            0 6px 10px
+            rgba(0,0,0,.5)
+        )
+
+        drop-shadow(
+            0 0 12px
+            rgba(255,215,150,.75)
+        )
+
+        drop-shadow(
+            0 0 25px
+            rgba(255,215,150,.35)
+        );
 }
+
 
 .paw:active svg{
-    transform:scale(.9);
+
+    transform:
+        scale(.86);
 }
 
+
+/* =====================================================
+   NÚMERO DE LA CARTA
+===================================================== */
+
 .paw-number{
+
     position:absolute;
+
     left:50%;
+
     top:53%;
-    transform:translate(-50%,-50%);
-    font-size:.58rem;
+
+    transform:
+        translate(-50%,-50%);
+
+    font-size:.56rem;
+
     font-weight:600;
+
     letter-spacing:.5px;
-    color:#261b13;
+
+    color:#261c13;
+
     pointer-events:none;
 }
 
-/*
-    POSICIONES DE LAS 31 HUELLITAS
 
-    Puedes cambiarlas después si quieres.
-    Cada posición está pensada para crear
-    un recorrido irregular.
-*/
+/* =====================================================
+   APARICIÓN DE UNA NUEVA HUELLA
+===================================================== */
 
-.paw:nth-of-type(1){left:4%;top:7%;transform:rotate(-18deg)}
-.paw:nth-of-type(2){left:23%;top:2%;transform:rotate(13deg)}
-.paw:nth-of-type(3){left:49%;top:5%;transform:rotate(-8deg)}
-.paw:nth-of-type(4){right:20%;top:1%;transform:rotate(17deg)}
-.paw:nth-of-type(5){right:2%;top:10%;transform:rotate(-13deg)}
+@keyframes pawAppear{
 
-.paw:nth-of-type(6){left:10%;top:20%;transform:rotate(14deg)}
-.paw:nth-of-type(7){left:38%;top:17%;transform:rotate(-18deg)}
-.paw:nth-of-type(8){right:28%;top:21%;transform:rotate(10deg)}
-.paw:nth-of-type(9){right:5%;top:25%;transform:rotate(-16deg)}
+    0%{
 
-.paw:nth-of-type(10){left:2%;top:34%;transform:rotate(8deg)}
-.paw:nth-of-type(11){left:25%;top:31%;transform:rotate(-14deg)}
-.paw:nth-of-type(12){left:55%;top:35%;transform:rotate(18deg)}
-.paw:nth-of-type(13){right:8%;top:37%;transform:rotate(-10deg)}
+        opacity:0;
 
-.paw:nth-of-type(14){left:14%;top:45%;transform:rotate(-17deg)}
-.paw:nth-of-type(15){left:42%;top:47%;transform:rotate(13deg)}
-.paw:nth-of-type(16){right:21%;top:44%;transform:rotate(-12deg)}
-.paw:nth-of-type(17){right:1%;top:51%;transform:rotate(15deg)}
+        transform:
+            translate(-50%,-50%)
+            scale(.15)
+            rotate(0deg);
+    }
 
-.paw:nth-of-type(18){left:4%;top:59%;transform:rotate(-8deg)}
-.paw:nth-of-type(19){left:30%;top:58%;transform:rotate(17deg)}
-.paw:nth-of-type(20){left:59%;top:60%;transform:rotate(-16deg)}
-.paw:nth-of-type(21){right:7%;top:63%;transform:rotate(10deg)}
+    55%{
 
-.paw:nth-of-type(22){left:15%;top:70%;transform:rotate(15deg)}
-.paw:nth-of-type(23){left:43%;top:69%;transform:rotate(-12deg)}
-.paw:nth-of-type(24){right:24%;top:73%;transform:rotate(18deg)}
-.paw:nth-of-type(25){right:1%;top:77%;transform:rotate(-10deg)}
+        opacity:1;
 
-.paw:nth-of-type(26){left:4%;top:82%;transform:rotate(13deg)}
-.paw:nth-of-type(27){left:28%;top:84%;transform:rotate(-15deg)}
-.paw:nth-of-type(28){left:53%;top:82%;transform:rotate(9deg)}
-.paw:nth-of-type(29){right:21%;top:87%;transform:rotate(-14deg)}
-.paw:nth-of-type(30){right:4%;top:90%;transform:rotate(16deg)}
-.paw:nth-of-type(31){left:46%;top:94%;transform:rotate(-8deg)}
+        transform:
+            translate(-50%,-50%)
+            scale(1.18)
+            rotate(var(--rotation));
+    }
 
-/* PIE */
+    100%{
+
+        opacity:1;
+
+        transform:
+            translate(-50%,-50%)
+            scale(1)
+            rotate(var(--rotation));
+    }
+}
+
+
+/* =====================================================
+   BRILLO SUAVE
+
+   Las huellas parecen pequeñas luces respirando.
+===================================================== */
+
+@keyframes softGlow{
+
+    0%,
+    100%{
+
+        opacity:.82;
+
+        filter:
+
+            drop-shadow(
+                0 4px 7px
+                rgba(0,0,0,.5)
+            )
+
+            drop-shadow(
+                0 0 calc(5px * var(--glow))
+                rgba(255,215,150,.45)
+            )
+
+            drop-shadow(
+                0 0 calc(13px * var(--glow))
+                rgba(255,215,150,.18)
+            );
+    }
+
+    50%{
+
+        opacity:1;
+
+        filter:
+
+            drop-shadow(
+                0 4px 8px
+                rgba(0,0,0,.5)
+            )
+
+            drop-shadow(
+                0 0 calc(10px * var(--glow))
+                rgba(255,220,160,.78)
+            )
+
+            drop-shadow(
+                0 0 calc(24px * var(--glow))
+                rgba(255,215,150,.38)
+            );
+    }
+}
+
+
+/* =====================================================
+   PIE
+===================================================== */
+
 .footer{
+
     text-align:center;
+
     margin-top:12px;
+
     padding-top:20px;
+
     color:#9e927e;
-    font-family:'Cormorant Garamond',serif;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
     font-size:1rem;
 }
 
+
 .footer .paw-mini{
+
     display:block;
-    margin:0 auto 8px;
+
+    margin:
+        0
+        auto
+        8px;
+
     font-size:1.4rem;
 }
 
-/* ANIMACIONES */
+
+/* =====================================================
+   ANIMACIONES GENERALES
+===================================================== */
+
 @keyframes fadeDown{
+
     from{
+
         opacity:0;
-        transform:translateY(-18px);
+
+        transform:
+            translateY(-18px);
     }
+
     to{
+
         opacity:1;
-        transform:translateY(0);
+
+        transform:
+            translateY(0);
     }
 }
+
 
 @keyframes photoIn{
+
     from{
+
         opacity:0;
-        transform:scale(.96) translateY(18px);
+
+        transform:
+            scale(.96)
+            translateY(18px);
     }
+
     to{
+
         opacity:1;
-        transform:scale(1) translateY(0);
+
+        transform:
+            scale(1)
+            translateY(0);
     }
 }
+
 
 @keyframes fadeUp{
+
     from{
+
         opacity:0;
-        transform:translateY(12px);
+
+        transform:
+            translateY(12px);
     }
+
     to{
+
         opacity:1;
-        transform:translateY(0);
+
+        transform:
+            translateY(0);
     }
 }
 
-@keyframes pawAppear{
-    0%{
-        opacity:0;
-        transform:scale(.2) rotate(0deg);
-    }
-    65%{
-        opacity:1;
-        transform:scale(1.15) rotate(0deg);
-    }
-    100%{
-        opacity:1;
-    }
-}
 
-/* MÓVIL */
+/* =====================================================
+   MÓVIL
+===================================================== */
+
 @media(max-width:500px){
 
     .page{
-        padding:20px 10px 45px;
+
+        padding:
+            20px
+            10px
+            45px;
     }
 
+
     .photo-area{
+
         padding:6px;
+
         border-radius:18px;
     }
 
+
     .photo-inner{
+
         border-radius:14px;
     }
 
+
     .paw-zone{
-        min-height:900px;
+
+        min-height:980px;
+
         margin-top:22px;
     }
 
+
     .paw{
-        width:52px;
-        height:52px;
+
+        width:51px;
+
+        height:51px;
     }
 
-    .paw:nth-of-type(1){left:2%}
-    .paw:nth-of-type(5){right:1%}
-    .paw:nth-of-type(9){right:1%}
-    .paw:nth-of-type(13){right:1%}
-    .paw:nth-of-type(17){right:0}
-    .paw:nth-of-type(21){right:1%}
-    .paw:nth-of-type(25){right:0}
-    .paw:nth-of-type(30){right:1%}
+
+    .instructions p{
+
+        font-size:1.05rem;
+    }
+
 }
 
-/* PANTALLAS GRANDES */
+
+/* =====================================================
+   PANTALLAS GRANDES
+===================================================== */
+
 @media(min-width:700px){
 
     .paw-zone{
-        min-height:1050px;
+
+        min-height:1150px;
     }
+
 
     .paw{
+
         width:64px;
+
         height:64px;
     }
+
 }
 
-    .paw.lit svg {
-    filter:
-        drop-shadow(0 0 5px rgba(255,215,150,.45))
-        drop-shadow(0 0 12px rgba(255,215,150,.22));
-    animation: softGlow 3s ease-in-out infinite;
-}
-
-@keyframes softGlow {
-    0%,100% {
-        filter:
-            drop-shadow(0 0 5px rgba(255,215,150,.4))
-            drop-shadow(0 0 10px rgba(255,215,150,.18));
-    }
-
-    50% {
-        filter:
-            drop-shadow(0 0 8px rgba(255,215,150,.7))
-            drop-shadow(0 0 20px rgba(255,215,150,.35));
-    }
-}
-    
 </style>
 </head>
 
+
 <body>
+
 
 <main class="page">
 
-    <!-- =========================
+
+    <!-- =================================================
          ENCABEZADO
-    ========================== -->
+    ================================================== -->
 
     <header class="header">
 
-        <div class="mini">31 mañanas contigo</div>
 
-        <h1>OCTUBRE</h1>
+        <div class="mini">
+            31 mañanas contigo
+        </div>
+
+
+        <h1>
+            OCTUBRE
+        </h1>
+
 
         <div class="subtitle">
+
             Donde cada huellita me lleva hasta ti.
-            <p><strong>Y DONDE NOAH CAMINA POR NUESTROS DÍAS CUIDÁNDONOS Y AUNQUE NO LO VEAMOS ESTA TAMBIÉN EN NUESTROS CORAZÓNES Y PENSAMIENTOS</strong></p>
+
+            <p>
+
+                <strong>
+                    Y DONDE NOAH CAMINA POR NUESTROS DÍAS
+                    CUIDÁNDONOS Y AUNQUE NO LO VEAMOS
+                    TAMBIÉN ESTÁ EN NUESTROS CORAZONES
+                    Y PENSAMIENTOS
+                </strong>
+
+            </p>
 
         </div>
+
 
         <div class="divider">
+
             <span></span>
+
             🐾
+
             <span></span>
+
         </div>
+
 
     </header>
 
 
-    <!-- =========================
+
+    <!-- =================================================
          FOTO PRINCIPAL
 
-         AQUÍ NO TIENES QUE CAMBIAR NADA
-         SI TU FOTO SE LLAMA:
-         noah-octubre.jpg
-    ========================== -->
+         AQUÍ PUEDES CAMBIAR SOLAMENTE EL NOMBRE
+         DE LA IMAGEN SI LO NECESITAS.
+    ================================================== -->
 
     <section class="photo-area">
 
+
         <div class="photo-inner">
+
 
             <img
                 src="file_00000000e38481f5bd33b05437189a2c.png"
-                alt="Nuestro recuerdo"
+                alt="Nuestro recuerdo de Noah"
             >
 
+
         </div>
+
 
     </section>
 
 
-    <!-- =========================
-         ZONA DE LAS 31 HUELLITAS
-    ========================== -->
+
+    <!-- =================================================
+         ZONA DE LAS HUELLITAS
+    ================================================== -->
 
     <section class="paw-zone">
 
+
         <div class="instructions">
+
 
             <div class="small">
                 Nuestro camino de octubre
             </div>
 
+
             <p>
                 Cada huellita guarda algo que escribí para ti.
             </p>
-            
+
+
         </div>
 
 
-        <!-- =========================================
-             DÍAS 1 - 31
+        <!--
+            TODAS LAS HUELLITAS SE CREAN AQUÍ
+            AUTOMÁTICAMENTE.
+        -->
 
-             SOLO TIENES QUE PONER EL LINK.
+        <div id="paws"></div>
 
-             EJEMPLO:
-
-             "1": "https://j8753741-eng.github.io/carta-1/"
-
-             Si está vacío:
-
-             "1": ""
-
-             LA HUELLITA NO APARECE.
-        ========================================== -->
-
-        <!-- Día 1 -->
-        <a class="paw" id="paw-1">
-            <svg viewBox="0 0 100 100">
-                <g fill="#ead0a2">
-                    <ellipse cx="50" cy="61" rx="25" ry="22"/>
-                    <ellipse cx="27" cy="35" rx="11" ry="15" transform="rotate(-25 27 35)"/>
-                    <ellipse cx="43" cy="25" rx="11" ry="15" transform="rotate(-8 43 25)"/>
-                    <ellipse cx="59" cy="25" rx="11" ry="15" transform="rotate(8 59 25)"/>
-                    <ellipse cx="74" cy="36" rx="11" ry="15" transform="rotate(25 74 36)"/>
-                </g>
-            </svg>
-            <span class="paw-number">01</span>
-        </a>
-
-        <!-- Días 2-31 se generan automáticamente -->
-
-        <div id="generated-paws"></div>
 
     </section>
 
 
+
+    <!-- =================================================
+         PIE
+    ================================================== -->
+
     <footer class="footer">
-        <div class="paw-mini">🐾</div>
-        <div>Y todavía quedan muchas huellitas por recorrer...</div>
+
+
+        <div class="paw-mini">
+            🐾
+        </div>
+
+
+        <div>
+            Y todavía quedan muchas huellitas por recorrer...
+        </div>
+
+
     </footer>
+
 
 </main>
 
 
+
 <script>
 
+
 /* =========================================================
-   🔗 AQUÍ PONES LOS LINKS DE TUS 31 CARTAS
+   🔗 LINKS DE LAS 31 CARTAS
 
-   IMPORTANTE:
-
-   NO CAMBIES LOS NÚMEROS.
-
-   Solo cambia "" por el enlace correspondiente.
+   SOLO TIENES QUE CAMBIAR LOS ""
 
    Ejemplo:
 
-   1: "https://tu-carta-del-dia-1.com"
+   3: "https://tu-link.com"
 
-   Si todavía no tienes la carta:
-
-   1: ""
-
-   Esa huellita permanecerá invisible.
+   Si está vacío:
+   la huellita NO aparece.
 ========================================================= */
 
 const cartas = {
 
-    1:  "https://j8753741-eng.github.io/Jueves-1-de-octubre-del-2026---carta/",
-    2:  "https://j8753741-eng.github.io/Viernes-2-de-octubre-del-2026---carta/",
+    1:
+    "https://j8753741-eng.github.io/Jueves-1-de-octubre-del-2026---carta/",
+
+    2:
+    "https://j8753741-eng.github.io/Viernes-2-de-octubre-del-2026---carta/",
+
     3:  "",
+
     4:  "",
+
     5:  "",
+
     6:  "",
+
     7:  "",
+
     8:  "",
+
     9:  "",
+
     10: "",
+
     11: "",
+
     12: "",
+
     13: "",
+
     14: "",
+
     15: "",
+
     16: "",
+
     17: "",
+
     18: "",
+
     19: "",
+
     20: "",
+
     21: "",
+
     22: "",
+
     23: "",
+
     24: "",
+
     25: "",
+
     26: "",
+
     27: "",
+
     28: "",
+
     29: "",
+
     30: "",
+
     31: ""
 
 };
 
 
+
 /* =========================================================
-   FECHA ACTUAL
+   📍 POSICIONES INDIVIDUALES
 
-   Las cartas también respetan el día de octubre.
+   Cada huella tiene SU PROPIO lugar.
 
-   Ejemplo:
-   Si es 5 de octubre, aunque ya hayas puesto el link
-   del día 20, la huellita 20 no aparecerá todavía.
+   [horizontal, vertical]
 
-   Si quieres subir varios links de una vez, esto evita
-   que se desbloqueen antes de tiempo.
+   0 = extremo izquierdo / arriba
+   100 = extremo derecho / abajo
+========================================================= */
+
+const posiciones = {
+
+
+    1:  [7, 11],
+
+    2:  [27, 7],
+
+    3:  [49, 11],
+
+    4:  [72, 7],
+
+    5:  [93, 14],
+
+
+    6:  [13, 22],
+
+    7:  [36, 19],
+
+    8:  [60, 23],
+
+    9:  [84, 26],
+
+
+    10: [6, 33],
+
+    11: [27, 30],
+
+    12: [51, 34],
+
+    13: [74, 34],
+
+    14: [94, 39],
+
+
+    15: [15, 44],
+
+    16: [39, 46],
+
+    17: [63, 44],
+
+    18: [85, 49],
+
+
+    19: [6, 56],
+
+    20: [29, 55],
+
+    21: [52, 58],
+
+    22: [75, 58],
+
+    23: [94, 62],
+
+
+    24: [14, 68],
+
+    25: [39, 68],
+
+    26: [63, 69],
+
+    27: [85, 73],
+
+
+    28: [7, 80],
+
+    29: [31, 82],
+
+    30: [57, 84],
+
+    31: [79, 90]
+
+};
+
+
+
+/* =========================================================
+   🔄 ROTACIÓN DE CADA HUELLITA
+
+   Esto hace que no parezcan colocadas todas iguales.
+========================================================= */
+
+const rotaciones = {
+
+    1: -18,
+    2: 12,
+    3: -8,
+    4: 17,
+    5: -13,
+
+    6: 14,
+    7: -18,
+    8: 10,
+    9: -16,
+
+    10: 8,
+    11: -14,
+    12: 18,
+    13: -10,
+    14: 15,
+
+    15: -17,
+    16: 13,
+    17: -12,
+    18: 15,
+
+    19: -8,
+    20: 17,
+    21: -16,
+    22: 10,
+    23: -14,
+
+    24: 15,
+    25: -12,
+    26: 9,
+    27: -16,
+
+    28: 13,
+    29: -15,
+    30: 9,
+    31: -8
+
+};
+
+
+
+/* =========================================================
+   📅 FECHA ACTUAL
 ========================================================= */
 
 const ahora = new Date();
 
-const mesActual = ahora.getMonth() + 1;
-const diaActual = ahora.getDate();
+const mesActual =
+    ahora.getMonth() + 1;
+
+const diaActual =
+    ahora.getDate();
+
 
 
 /* =========================================================
-   CREACIÓN DE HUELLITAS
+   CONTENEDOR
 ========================================================= */
 
-const container = document.getElementById("generated-paws");
+const pawsContainer =
+    document.getElementById("paws");
 
 
-/* SVG DE LA HUELLITA */
+
+/* =========================================================
+   SVG DE LA HUELLITA
+========================================================= */
 
 function crearSVG(){
 
+
     return `
-        <svg viewBox="0 0 100 100">
+
+        <svg
+            viewBox="0 0 100 100"
+            aria-hidden="true"
+        >
+
             <g fill="#ead0a2">
-                <ellipse cx="50" cy="61" rx="25" ry="22"/>
-                <ellipse cx="27" cy="35" rx="11" ry="15"
-                    transform="rotate(-25 27 35)"/>
-                <ellipse cx="43" cy="25" rx="11" ry="15"
-                    transform="rotate(-8 43 25)"/>
-                <ellipse cx="59" cy="25" rx="11" ry="15"
-                    transform="rotate(8 59 25)"/>
-                <ellipse cx="74" cy="36" rx="11" ry="15"
-                    transform="rotate(25 74 36)"/>
+
+
+                <!-- almohadilla -->
+
+                <ellipse
+                    cx="50"
+                    cy="61"
+                    rx="25"
+                    ry="22"
+                />
+
+
+                <!-- dedo izquierdo -->
+
+                <ellipse
+                    cx="27"
+                    cy="35"
+                    rx="11"
+                    ry="15"
+                    transform="
+                        rotate(-25 27 35)
+                    "
+                />
+
+
+                <!-- dedo superior izquierdo -->
+
+                <ellipse
+                    cx="43"
+                    cy="25"
+                    rx="11"
+                    ry="15"
+                    transform="
+                        rotate(-8 43 25)
+                    "
+                />
+
+
+                <!-- dedo superior derecho -->
+
+                <ellipse
+                    cx="59"
+                    cy="25"
+                    rx="11"
+                    ry="15"
+                    transform="
+                        rotate(8 59 25)
+                    "
+                />
+
+
+                <!-- dedo derecho -->
+
+                <ellipse
+                    cx="74"
+                    cy="36"
+                    rx="11"
+                    ry="15"
+                    transform="
+                        rotate(25 74 36)
+                    "
+                />
+
+
             </g>
+
         </svg>
+
     `;
 
 }
 
 
+
 /* =========================================================
-   CREAR DÍAS 2-31
+   🐾 CREAR LAS 31 HUELLITAS
+
+   Todas se crean desde el principio,
+   pero permanecen invisibles si todavía
+   no tienen carta.
 ========================================================= */
 
-for(let dia = 2; dia <= 31; dia++){
+for(
+    let dia = 1;
+    dia <= 31;
+    dia++
+){
 
-    const paw = document.createElement("a");
 
-    paw.className = "paw";
+    const paw =
+        document.createElement("a");
 
-    paw.id = `paw-${dia}`;
+
+    paw.className =
+        "paw";
+
+
+    paw.id =
+        `paw-${dia}`;
+
 
     paw.innerHTML = `
+
         ${crearSVG()}
+
         <span class="paw-number">
+
             ${String(dia).padStart(2,"0")}
+
         </span>
+
     `;
 
-    container.appendChild(paw);
+
+
+    /* =================================================
+       POSICIÓN ÚNICA
+    ================================================= */
+
+    const posicion =
+        posiciones[dia];
+
+
+    paw.style.left =
+        posicion[0] + "%";
+
+
+    paw.style.top =
+        posicion[1] + "%";
+
+
+
+    /* =================================================
+       ROTACIÓN ÚNICA
+    ================================================= */
+
+    paw.style.setProperty(
+        "--rotation",
+        rotaciones[dia] + "deg"
+    );
+
+
+
+    /* =================================================
+       ✨ INTENSIDAD DE LA LUZ
+
+       Día 1  = suave
+       Día 31 = máxima
+
+       La huella nueva será progresivamente
+       más luminosa que las anteriores.
+    ================================================= */
+
+    const intensidad =
+
+        0.35 +
+
+        (
+            (dia - 1) / 30
+        ) * 0.65;
+
+
+    paw.style.setProperty(
+        "--glow",
+        intensidad
+    );
+
+
+
+    /* =================================================
+       GUARDAR EN EL CONTENEDOR
+    ================================================= */
+
+    pawsContainer.appendChild(paw);
 
 }
 
 
+
 /* =========================================================
-   MOSTRAR SOLAMENTE LAS HUELLITAS DISPONIBLES
+   🐾 MOSTRAR LAS HUELLITAS
 ========================================================= */
 
-for(let dia = 1; dia <= 31; dia++){
-
-    const link = cartas[dia];
-
-    const paw = document.getElementById(`paw-${dia}`);
-
-    if(!paw) continue;
+for(
+    let dia = 1;
+    dia <= 31;
+    dia++
+){
 
 
-    /*
-       Si NO hay enlace:
-       la huellita permanece invisible.
-    */
+    const paw =
+        document.getElementById(
+            `paw-${dia}`
+        );
 
-    if(!link || link.trim() === ""){
-        paw.style.display = "none";
+
+    const link =
+        cartas[dia];
+
+
+
+    /* ================================================
+       SIN LINK
+
+       La huella no existe visualmente.
+    ================================================= */
+
+    if(
+        !link ||
+        link.trim() === ""
+    ){
+
+        paw.style.display =
+            "none";
+
         continue;
-    }
-
-
-    /*
-       Si estamos en octubre:
-       solamente aparece cuando llega su día.
-    */
-
-    if(mesActual === 10){
-
-        if(dia > diaActual){
-
-            paw.style.display = "none";
-            continue;
-
-        }
 
     }
 
 
-    /*
-       La carta está disponible.
-    */
 
-    paw.href = link;
+    /* ================================================
+       NO MOSTRAR DÍAS FUTUROS
 
-    paw.target = "_blank";
+       Esto funciona automáticamente
+       durante octubre.
+    ================================================= */
 
-    paw.rel = "noopener noreferrer";
+    if(
+        mesActual === 10 &&
+        dia > diaActual
+    ){
 
-    paw.style.display = "block";
+        paw.style.display =
+            "none";
+
+        continue;
+
+    }
+
+
+
+    /* ================================================
+       CARTA DISPONIBLE
+    ================================================= */
+
+    paw.href =
+        link;
+
+
+    paw.target =
+        "_blank";
+
+
+    paw.rel =
+        "noopener noreferrer";
+
+
+    paw.style.display =
+        "block";
+
 
 }
 
 
+
 /* =========================================================
-   CASO ESPECIAL:
-   SI LA PÁGINA SE ABRE FUERA DE OCTUBRE,
-   NO MOSTRAMOS CARTAS FUTURAS.
+   SI NO ESTAMOS EN OCTUBRE
+
+   No mostrar cartas futuras.
 ========================================================= */
 
-if(mesActual !== 10){
+if(
+    mesActual !== 10
+){
 
-    for(let dia = 1; dia <= 31; dia++){
+    for(
+        let dia = 1;
+        dia <= 31;
+        dia++
+    ){
 
-        const paw = document.getElementById(`paw-${dia}`);
+        const paw =
+            document.getElementById(
+                `paw-${dia}`
+            );
+
 
         if(paw){
-            paw.style.display = "none";
+
+            paw.style.display =
+                "none";
+
         }
 
     }
 
 }
-
-    const intensidad = 0.20 + ((dia - 1) / 30) * 0.80;
-
-paw.style.setProperty(
-    "--paw-glow",
-    intensidad
-);
-
-paw.classList.add("lit");
 
 </script>
 
+
 </body>
-  </html>
+</html> 
