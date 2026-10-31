@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,9 +9,7 @@
 <title>Octubre · Donde cada huellita me lleva hasta ti y donde Noah camina por nuestros días cuidándonos</title>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap');
-
 
 *{
     box-sizing:border-box;
@@ -18,1528 +17,598 @@
     padding:0;
 }
 
-
 html{
     scroll-behavior:smooth;
 }
 
-
 body{
-
     min-height:100vh;
-
     background:
-        radial-gradient(
-            circle at 50% 15%,
-            rgba(255,210,150,.13),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 20% 70%,
-            rgba(80,100,180,.10),
-            transparent 35%
-        ),
-
+        radial-gradient(circle at 50% 15%,rgba(255,210,150,.13),transparent 30%),
+        radial-gradient(circle at 20% 70%,rgba(80,100,180,.10),transparent 35%),
         #070a15;
-
     color:#f7ead5;
-
     font-family:'Montserrat',sans-serif;
-
     overflow-x:hidden;
 }
 
-
-/* =====================================================
-   PEQUEÑAS LUCES DEL FONDO
-===================================================== */
-
 body::before{
-
     content:"";
-
     position:fixed;
-
     inset:0;
-
     pointer-events:none;
-
     background:
-
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(255,255,255,.10) 0 1px,
-            transparent 2px
-        ),
-
-        radial-gradient(
-            circle at 80% 35%,
-            rgba(255,220,170,.12) 0 1px,
-            transparent 2px
-        ),
-
-        radial-gradient(
-            circle at 55% 80%,
-            rgba(255,255,255,.08) 0 1px,
-            transparent 2px
-        );
-
-    background-size:
-        170px 190px,
-        220px 230px,
-        260px 280px;
-
+        radial-gradient(circle at 15% 20%,rgba(255,255,255,.10) 0 1px,transparent 2px),
+        radial-gradient(circle at 80% 35%,rgba(255,220,170,.12) 0 1px,transparent 2px),
+        radial-gradient(circle at 55% 80%,rgba(255,255,255,.08) 0 1px,transparent 2px);
+    background-size:170px 190px,220px 230px,260px 280px;
     opacity:.6;
-
     z-index:-1;
 }
 
-
-/* =====================================================
-   CONTENEDOR
-===================================================== */
-
 .page{
-
     width:min(100%,760px);
-
     margin:auto;
-
-    padding:
-        25px
-        14px
-        55px;
+    padding:25px 14px 55px;
 }
-
-
-/* =====================================================
-   ENCABEZADO
-===================================================== */
 
 .header{
-
     text-align:center;
-
     margin-bottom:22px;
-
-    animation:
-        fadeDown
-        1.2s
-        ease
-        both;
+    animation:fadeDown 1.2s ease both;
 }
 
-
 .mini{
-
     font-size:.66rem;
-
     letter-spacing:4px;
-
     text-transform:uppercase;
-
     color:#d9bd8b;
-
     margin-bottom:8px;
 }
 
-
 h1{
-
-    font-family:
-        'Cormorant Garamond',
-        serif;
-
-    font-size:
-        clamp(
-            2.8rem,
-            13vw,
-            5rem
-        );
-
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(2.8rem,13vw,5rem);
     line-height:.85;
-
     font-weight:600;
-
     color:#f8dfb4;
-
-    text-shadow:
-        0 4px 25px
-        rgba(255,205,130,.18);
+    text-shadow:0 4px 25px rgba(255,205,130,.18);
 }
 
-
 .subtitle{
-
-    margin:
-        13px
-        auto
-        0;
-
+    margin:13px auto 0;
     max-width:430px;
-
-    font-family:
-        'Cormorant Garamond',
-        serif;
-
+    font-family:'Cormorant Garamond',serif;
     font-size:1.18rem;
-
     line-height:1.3;
-
     color:#eadcc9;
 }
 
-
 .subtitle p{
-
     margin-top:12px;
-
-    font-family:
-        'Montserrat',
-        sans-serif;
-
+    font-family:'Montserrat',sans-serif;
     font-size:.69rem;
-
     line-height:1.7;
-
     letter-spacing:.5px;
-
     color:#cdbd9e;
 }
 
-
 .divider{
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:9px;
-
     margin-top:14px;
-
     color:#d9b67b;
 }
 
-
 .divider span{
-
     width:35px;
-
     height:1px;
-
-    background:
-        rgba(217,182,123,.5);
+    background:rgba(217,182,123,.5);
 }
-
-
-/* =====================================================
-   MARCO DE LA FOTO
-===================================================== */
 
 .photo-area{
-
     position:relative;
-
     width:100%;
-
     margin:0 auto;
-
     padding:8px;
-
     border-radius:22px;
-
-    background:
-
-        linear-gradient(
-            145deg,
-            rgba(240,208,158,.65),
-            rgba(255,255,255,.12) 35%,
-            rgba(128,94,55,.6) 100%
-        );
-
-    box-shadow:
-
-        0 25px 70px
-        rgba(0,0,0,.55),
-
-        0 0 35px
-        rgba(255,207,145,.10);
-
-    animation:
-        photoIn
-        1.4s
-        ease
-        both;
+    background:linear-gradient(145deg,rgba(240,208,158,.65),rgba(255,255,255,.12) 35%,rgba(128,94,55,.6) 100%);
+    box-shadow:0 25px 70px rgba(0,0,0,.55),0 0 35px rgba(255,207,145,.10);
+    animation:photoIn 1.4s ease both;
 }
 
-
 .photo-inner{
-
     position:relative;
-
     overflow:hidden;
-
     border-radius:17px;
-
     background:#101522;
 }
 
-
 .photo-inner img{
-
     display:block;
-
     width:100%;
-
     height:auto;
-
     object-fit:cover;
 }
 
-
-/* Brillo sobre la fotografía */
-
 .photo-inner::after{
-
     content:"";
-
     position:absolute;
-
     inset:0;
-
     pointer-events:none;
-
-    background:
-
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,.08),
-            transparent 35%,
-            transparent 70%,
-            rgba(255,210,150,.06)
-        );
+    background:linear-gradient(135deg,rgba(255,255,255,.08),transparent 35%,transparent 70%,rgba(255,210,150,.06));
 }
 
-
-/* =====================================================
-   ZONA DEL CAMINO DE HUELLITAS
-===================================================== */
+/* CAMINO DE HUELLITAS */
 
 .paw-zone{
-
     position:relative;
-
     margin-top:28px;
-
     min-height:1050px;
-
-    padding:
-        20px
-        5px;
+    padding:20px 5px;
 }
-
-
-/* =====================================================
-   TEXTO
-===================================================== */
 
 .instructions{
-
     position:relative;
-
     z-index:2;
-
     text-align:center;
-
     margin-bottom:10px;
-
-    animation:
-        fadeUp
-        1.4s
-        ease
-        both;
+    animation:fadeUp 1.4s ease both;
 }
 
-
 .instructions .small{
-
     font-size:.66rem;
-
     letter-spacing:2px;
-
     text-transform:uppercase;
-
     color:#bca889;
 }
 
-
 .instructions p{
-
     margin-top:6px;
-
-    font-family:
-        'Cormorant Garamond',
-        serif;
-
+    font-family:'Cormorant Garamond',serif;
     font-size:1.12rem;
-
     color:#eadcc9;
 }
 
-
-/* =====================================================
-   CONTENEDOR REAL DE LAS 31 HUELLITAS
-
-   MUY IMPORTANTE:
-   Todas las huellas viven aquí.
-   Cada una tendrá su propia posición.
-===================================================== */
-
 #paws{
-
     position:absolute;
-
     inset:0;
-
     pointer-events:none;
-
     z-index:5;
 }
 
-
-/* =====================================================
-   CADA HUELLITA
-===================================================== */
-
 .paw{
-
     position:absolute;
-
     width:57px;
-
     height:57px;
-
     display:none;
-
     border:0;
-
     background:transparent;
-
     text-decoration:none;
-
     cursor:pointer;
-
     pointer-events:auto;
-
     -webkit-tap-highlight-color:transparent;
-
-    transform:
-        translate(-50%,-50%)
-        rotate(var(--rotation));
-
+    transform:translate(-50%,-50%) rotate(var(--rotation));
     opacity:0;
-
-    animation:
-        pawAppear
-        1s
-        cubic-bezier(.2,.8,.2,1)
-        forwards;
+    animation:pawAppear 1s cubic-bezier(.2,.8,.2,1) forwards;
 }
-
-
-/* =====================================================
-   DIBUJO DE LA PATITA
-===================================================== */
 
 .paw svg{
-
     width:100%;
-
     height:100%;
-
     overflow:visible;
-
     filter:
-
-        drop-shadow(
-            0 4px 7px
-            rgba(0,0,0,.5)
-        )
-
-        drop-shadow(
-            0 0 calc(5px * var(--glow))
-            rgba(255,215,150,.45)
-        )
-
-        drop-shadow(
-            0 0 calc(13px * var(--glow))
-            rgba(255,215,150,.18)
-        );
-
-    animation:
-        softGlow
-        3.8s
-        ease-in-out
-        infinite;
-
-    transition:
-        transform .3s ease,
-        filter .3s ease;
+        drop-shadow(0 4px 7px rgba(0,0,0,.5))
+        drop-shadow(0 0 calc(5px * var(--glow)) rgba(255,215,150,.45))
+        drop-shadow(0 0 calc(13px * var(--glow)) rgba(255,215,150,.18));
+    animation:softGlow 3.8s ease-in-out infinite;
+    transition:transform .3s ease,filter .3s ease;
 }
-
-
-/* =====================================================
-   EFECTO AL PASAR EL DEDO / CURSOR
-===================================================== */
 
 .paw:hover svg{
-
-    transform:
-        scale(1.15)
-        rotate(-5deg);
-
+    transform:scale(1.15) rotate(-5deg);
     filter:
-
-        drop-shadow(
-            0 6px 10px
-            rgba(0,0,0,.5)
-        )
-
-        drop-shadow(
-            0 0 12px
-            rgba(255,215,150,.75)
-        )
-
-        drop-shadow(
-            0 0 25px
-            rgba(255,215,150,.35)
-        );
+        drop-shadow(0 6px 10px rgba(0,0,0,.5))
+        drop-shadow(0 0 12px rgba(255,215,150,.75))
+        drop-shadow(0 0 25px rgba(255,215,150,.35));
 }
-
 
 .paw:active svg{
-
-    transform:
-        scale(.86);
+    transform:scale(.86);
 }
 
-
-/* =====================================================
-   NÚMERO DE LA CARTA
-===================================================== */
-
 .paw-number{
-
     position:absolute;
-
     left:50%;
-
     top:53%;
-
-    transform:
-        translate(-50%,-50%);
-
+    transform:translate(-50%,-50%);
     font-size:.56rem;
-
     font-weight:600;
-
     letter-spacing:.5px;
-
     color:#261c13;
-
     pointer-events:none;
 }
 
-
-/* =====================================================
-   APARICIÓN DE UNA NUEVA HUELLA
-===================================================== */
-
 @keyframes pawAppear{
-
     0%{
-
         opacity:0;
-
-        transform:
-            translate(-50%,-50%)
-            scale(.15)
-            rotate(0deg);
+        transform:translate(-50%,-50%) scale(.15) rotate(0deg);
     }
-
     55%{
-
         opacity:1;
-
-        transform:
-            translate(-50%,-50%)
-            scale(1.18)
-            rotate(var(--rotation));
+        transform:translate(-50%,-50%) scale(1.18) rotate(var(--rotation));
     }
-
     100%{
-
         opacity:1;
-
-        transform:
-            translate(-50%,-50%)
-            scale(1)
-            rotate(var(--rotation));
+        transform:translate(-50%,-50%) scale(1) rotate(var(--rotation));
     }
 }
-
-
-/* =====================================================
-   BRILLO SUAVE
-
-   Las huellas parecen pequeñas luces respirando.
-===================================================== */
 
 @keyframes softGlow{
-
-    0%,
-    100%{
-
+    0%,100%{
         opacity:.82;
-
         filter:
-
-            drop-shadow(
-                0 4px 7px
-                rgba(0,0,0,.5)
-            )
-
-            drop-shadow(
-                0 0 calc(5px * var(--glow))
-                rgba(255,215,150,.45)
-            )
-
-            drop-shadow(
-                0 0 calc(13px * var(--glow))
-                rgba(255,215,150,.18)
-            );
+            drop-shadow(0 4px 7px rgba(0,0,0,.5))
+            drop-shadow(0 0 calc(5px * var(--glow)) rgba(255,215,150,.45))
+            drop-shadow(0 0 calc(13px * var(--glow)) rgba(255,215,150,.18));
     }
-
     50%{
-
         opacity:1;
-
         filter:
-
-            drop-shadow(
-                0 4px 8px
-                rgba(0,0,0,.5)
-            )
-
-            drop-shadow(
-                0 0 calc(10px * var(--glow))
-                rgba(255,220,160,.78)
-            )
-
-            drop-shadow(
-                0 0 calc(24px * var(--glow))
-                rgba(255,215,150,.38)
-            );
+            drop-shadow(0 4px 8px rgba(0,0,0,.5))
+            drop-shadow(0 0 calc(10px * var(--glow)) rgba(255,220,160,.78))
+            drop-shadow(0 0 calc(24px * var(--glow)) rgba(255,215,150,.38));
     }
 }
 
-
-/* =====================================================
-   PIE
-===================================================== */
-
 .footer{
-
     text-align:center;
-
     margin-top:12px;
-
     padding-top:20px;
-
     color:#9e927e;
-
-    font-family:
-        'Cormorant Garamond',
-        serif;
-
+    font-family:'Cormorant Garamond',serif;
     font-size:1rem;
 }
 
-
 .footer .paw-mini{
-
     display:block;
-
-    margin:
-        0
-        auto
-        8px;
-
+    margin:0 auto 8px;
     font-size:1.4rem;
 }
 
-
-/* =====================================================
-   ANIMACIONES GENERALES
-===================================================== */
-
 @keyframes fadeDown{
-
-    from{
-
-        opacity:0;
-
-        transform:
-            translateY(-18px);
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-            translateY(0);
-    }
+    from{opacity:0;transform:translateY(-18px);}
+    to{opacity:1;transform:translateY(0);}
 }
-
 
 @keyframes photoIn{
-
-    from{
-
-        opacity:0;
-
-        transform:
-            scale(.96)
-            translateY(18px);
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-            scale(1)
-            translateY(0);
-    }
+    from{opacity:0;transform:scale(.96) translateY(18px);}
+    to{opacity:1;transform:scale(1) translateY(0);}
 }
-
 
 @keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:
-            translateY(12px);
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-            translateY(0);
-    }
+    from{opacity:0;transform:translateY(12px);}
+    to{opacity:1;transform:translateY(0);}
 }
 
-
-/* =====================================================
-   MÓVIL
-===================================================== */
-
 @media(max-width:500px){
-
     .page{
-
-        padding:
-            20px
-            10px
-            45px;
+        padding:20px 10px 45px;
     }
 
-
     .photo-area{
-
         padding:6px;
-
         border-radius:18px;
     }
 
-
     .photo-inner{
-
         border-radius:14px;
     }
 
-
     .paw-zone{
-
         min-height:980px;
-
         margin-top:22px;
     }
 
-
     .paw{
-
-        width:51px;
-
-        height:51px;
+        width:43px;
+        height:43px;
     }
-
 
     .instructions p{
-
         font-size:1.05rem;
     }
-
 }
 
-
-/* =====================================================
-   PANTALLAS GRANDES
-===================================================== */
-
 @media(min-width:700px){
-
     .paw-zone{
-
         min-height:1150px;
     }
 
-
     .paw{
-
         width:64px;
-
         height:64px;
     }
-
 }
-
 </style>
 </head>
 
-
 <body>
-
 
 <main class="page">
 
-
-    <!-- =================================================
-         ENCABEZADO
-    ================================================== -->
-
     <header class="header">
+        <div class="mini">31 mañanas contigo</div>
 
-
-        <div class="mini">
-            31 mañanas contigo
-        </div>
-
-
-        <h1>
-            OCTUBRE
-        </h1>
-
+        <h1>OCTUBRE</h1>
 
         <div class="subtitle">
-
             Donde cada huellita me lleva hasta ti.
 
             <p>
-
                 <strong>
                     Y DONDE NOAH CAMINA POR NUESTROS DÍAS
                     CUIDÁNDONOS Y AUNQUE NO LO VEAMOS
                     TAMBIÉN ESTÁ EN NUESTROS CORAZONES
                     Y PENSAMIENTOS
                 </strong>
-
             </p>
-
         </div>
-
 
         <div class="divider">
-
             <span></span>
-
             🐾
-
             <span></span>
-
         </div>
-
-
     </header>
 
-
-
-    <!-- =================================================
-         FOTO PRINCIPAL
-
-         AQUÍ PUEDES CAMBIAR SOLAMENTE EL NOMBRE
-         DE LA IMAGEN SI LO NECESITAS.
-    ================================================== -->
-
     <section class="photo-area">
-
-
         <div class="photo-inner">
-
-
             <img
                 src="file_00000000e38481f5bd33b05437189a2c.png"
                 alt="Nuestro recuerdo de Noah"
             >
-
-
         </div>
-
-
     </section>
-
-
-
-    <!-- =================================================
-         ZONA DE LAS HUELLITAS
-    ================================================== -->
 
     <section class="paw-zone">
 
-
         <div class="instructions">
-
-
-            <div class="small">
-                Nuestro camino de octubre
-            </div>
-
-
-            <p>
-                Cada huellita guarda algo que escribí para ti.
-            </p>
-
-
+            <div class="small">Nuestro camino de octubre</div>
+            <p>Cada huellita guarda algo que escribí para ti.</p>
         </div>
-
-
-        <!--
-            TODAS LAS HUELLITAS SE CREAN AQUÍ
-            AUTOMÁTICAMENTE.
-        -->
 
         <div id="paws"></div>
 
-
     </section>
 
-
-
-    <!-- =================================================
-         PIE
-    ================================================== -->
-
     <footer class="footer">
-
-
-        <div class="paw-mini">
-            🐾
-        </div>
-
-
-        <div>
-            Y todavía quedan muchas huellitas por recorrer...
-        </div>
-
-
+        <div class="paw-mini">🐾</div>
+        <div>Y todavía quedan muchas huellitas por recorrer...</div>
     </footer>
-
 
 </main>
 
-
-
 <script>
 
-
-/* =========================================================
-   🔗 LINKS DE LAS 31 CARTAS
-
-   SOLO TIENES QUE CAMBIAR LOS ""
-
-   Ejemplo:
-
-   3: "https://tu-link.com"
-
-   Si está vacío:
-   la huellita NO aparece.
-========================================================= */
+/* ENLACES DE LAS 31 CARTAS */
 
 const cartas = {
-
-    1:
-    "https://j8753741-eng.github.io/Jueves-1-de-octubre-del-2026---carta/",
-
-    2:
-    "https://j8753741-eng.github.io/Viernes-2-de-octubre-del-2026---carta/",
-
-    3:  
-    "https://j8753741-eng.github.io/S-bado-3-de-octubre-del-2026---carta/",
-
-    4:  
-        "https://j8753741-eng.github.io/Domingo-4-de-octubre-del-2026---carta/",
-
-    5:  
-        "https://j8753741-eng.github.io/Lunes-5-de-octubre-del-2026---carta/",
-
-    6:  
-        "https://j8753741-eng.github.io/Martes-6-de-octubre-del-2026---carta/",
-
-    7:  
-        "https://j8753741-eng.github.io/Mi-rcoles-7-de-octubre-del-2026---carta/",
-
-    8:  
-        "https://j8753741-eng.github.io/Jueves-8-de-octubre-del-2026---carta/",
-
-    9:  
-        "https://j8753741-eng.github.io/Viernes-9-de-octubre-del-2026---carta/",
-
-    10: 
-        "https://j8753741-eng.github.io/S-bado-10-de-octubre-del-2026---carta/",
-
-    11: 
-        "https://j8753741-eng.github.io/Domingo-11-de-octubre-del-2026---carta/",
-
-    12: 
-        "https://j8753741-eng.github.io/Lunes-12-de-octubre-del-2026---carta/",
-
-    13: 
-        "https://j8753741-eng.github.io/Martes-13-de-octubre-del-2026---carta/",
-
+    1: "https://j8753741-eng.github.io/Jueves-1-de-octubre-del-2026---carta/",
+    2: "https://j8753741-eng.github.io/Viernes-2-de-octubre-del-2026---carta/",
+    3: "https://j8753741-eng.github.io/S-bado-3-de-octubre-del-2026---carta/",
+    4: "https://j8753741-eng.github.io/Domingo-4-de-octubre-del-2026---carta/",
+    5: "https://j8753741-eng.github.io/Lunes-5-de-octubre-del-2026---carta/",
+    6: "https://j8753741-eng.github.io/Martes-6-de-octubre-del-2026---carta/",
+    7: "https://j8753741-eng.github.io/Mi-rcoles-7-de-octubre-del-2026---carta/",
+    8: "https://j8753741-eng.github.io/Jueves-8-de-octubre-del-2026---carta/",
+    9: "https://j8753741-eng.github.io/Viernes-9-de-octubre-del-2026---carta/",
+    10: "https://j8753741-eng.github.io/S-bado-10-de-octubre-del-2026---carta/",
+    11: "https://j8753741-eng.github.io/Domingo-11-de-octubre-del-2026---carta/",
+    12: "https://j8753741-eng.github.io/Lunes-12-de-octubre-del-2026---carta/",
+    13: "https://j8753741-eng.github.io/Martes-13-de-octubre-del-2026---carta/",
     14: "https://j8753741-eng.github.io/Mi-rcoles-14-de-octubre-del-2026-carta/",
-
     15: "https://j8753741-eng.github.io/Jueves-15-de-octubre-del-2026---carta/",
-
     16: "https://j8753741-eng.github.io/Viernes-16-de-octubre-del-2026---carta/",
-
     17: "https://j8753741-eng.github.io/S-bado-17-de-octubre-del-2026---carta/",
-
     18: "https://j8753741-eng.github.io/Domingo-18-de-octubre-del-2026---carta/",
-
     19: "https://j8753741-eng.github.io/Lunes-19-de-octubre-del-2026---carta/",
-
     20: "https://j8753741-eng.github.io/Martes-20-de-octubre-del-2026---carta/",
-
     21: "https://j8753741-eng.github.io/Mi-rcoles-21-de-octubre-del-2026---carta/",
-
     22: "https://j8753741-eng.github.io/Jueves-22-de-octubre-del-2026---carta/",
-
     23: "https://j8753741-eng.github.io/Viernes-23-de-octubre-del-2026---carta/",
-
     24: "https://j8753741-eng.github.io/S-bado-24-de-octubre-del-2026---carta/",
-
     25: "https://j8753741-eng.github.io/Domingo-25-de-octubre-del-2026---carta/",
-
     26: "https://j8753741-eng.github.io/Lunes-26-de-octubre-del-2026---carta/",
-
     27: "https://j8753741-eng.github.io/Martes-27-de-octubre-del-2026---carta/",
-
     28: "https://j8753741-eng.github.io/Mi-rcoles-28-de-octubre-del-2026---carta/",
-
     29: "https://j8753741-eng.github.io/Jueves-29-de-octubre-del-2026---carta/",
-
     30: "https://j8753741-eng.github.io/Viernes-30-de-octubre-del-2026---carta/",
-
     31: "https://j8753741-eng.github.io/S-bado-31-de-octubre-del-2026---carta/"
-
 };
 
 
-
-/* =========================================================
-   📍 POSICIONES INDIVIDUALES
-
-   Cada huella tiene SU PROPIO lugar.
-
-   [horizontal, vertical]
-
-   0 = extremo izquierdo / arriba
-   100 = extremo derecho / abajo
-========================================================= */
+/* POSICIONES DEL CORAZÓN
+   Cada pareja representa [horizontal, vertical].
+   Los números avanzan por el contorno del corazón:
+   desde la hendidura superior, bajan por la izquierda,
+   llegan a la punta y suben por la derecha.
+*/
 
 const posiciones = {
-
-
-    1:  [7, 11],
-
-    2:  [27, 7],
-
-    3:  [49, 11],
-
-    4:  [72, 7],
-
-    5:  [93, 14],
-
-
-    6:  [13, 22],
-
-    7:  [36, 19],
-
-    8:  [60, 23],
-
-    9:  [84, 26],
-
-
-    10: [6, 33],
-
-    11: [27, 30],
-
-    12: [51, 34],
-
-    13: [74, 34],
-
-    14: [94, 39],
-
-
-    15: [15, 44],
-
-    16: [39, 46],
-
-    17: [63, 44],
-
-    18: [85, 49],
-
-
-    19: [6, 56],
-
-    20: [29, 55],
-
-    21: [52, 58],
-
-    22: [75, 58],
-
-    23: [94, 62],
-
-
-    24: [14, 68],
-
-    25: [39, 68],
-
-    26: [63, 69],
-
-    27: [85, 73],
-
-
-    28: [7, 80],
-
-    29: [31, 82],
-
-    30: [57, 84],
-
-    31: [79, 90]
-
+    1:  [50, 12],
+    2:  [42, 9],
+    3:  [33, 8],
+    4:  [24, 10],
+    5:  [17, 15],
+    6:  [12, 22],
+    7:  [10, 30],
+    8:  [11, 39],
+    9:  [14, 48],
+    10: [19, 57],
+    11: [25, 65],
+    12: [32, 73],
+    13: [39, 80],
+    14: [45, 87],
+    15: [50, 93],
+    16: [55, 87],
+    17: [61, 80],
+    18: [68, 73],
+    19: [75, 65],
+    20: [81, 57],
+    21: [86, 48],
+    22: [89, 39],
+    23: [90, 30],
+    24: [88, 22],
+    25: [83, 15],
+    26: [76, 10],
+    27: [67, 8],
+    28: [58, 9],
+    29: [53, 12],
+    30: [47, 17],
+    31: [50, 22]
 };
 
 
-
-/* =========================================================
-   🔄 ROTACIÓN DE CADA HUELLITA
-
-   Esto hace que no parezcan colocadas todas iguales.
-========================================================= */
+/* ROTACIÓN DE CADA HUELLA */
 
 const rotaciones = {
-
-    1: -18,
-    2: 12,
-    3: -8,
-    4: 17,
-    5: -13,
-
-    6: 14,
-    7: -18,
-    8: 10,
-    9: -16,
-
-    10: 8,
-    11: -14,
-    12: 18,
-    13: -10,
-    14: 15,
-
-    15: -17,
-    16: 13,
-    17: -12,
-    18: 15,
-
-    19: -8,
-    20: 17,
-    21: -16,
-    22: 10,
-    23: -14,
-
-    24: 15,
+    1: -8,
+    2: 10,
+    3: -12,
+    4: 14,
+    5: -10,
+    6: 13,
+    7: -12,
+    8: 9,
+    9: -14,
+    10: 12,
+    11: -10,
+    12: 14,
+    13: -12,
+    14: 9,
+    15: -5,
+    16: 8,
+    17: -10,
+    18: 13,
+    19: -12,
+    20: 10,
+    21: -14,
+    22: 12,
+    23: -9,
+    24: 14,
     25: -12,
-    26: 9,
-    27: -16,
-
-    28: 13,
-    29: -15,
-    30: 9,
-    31: -8
-
+    26: 10,
+    27: -14,
+    28: 12,
+    29: -8,
+    30: 10,
+    31: 0
 };
 
 
-
-/* =========================================================
-   📅 FECHA ACTUAL
-========================================================= */
+/* FECHA ACTUAL */
 
 const ahora = new Date();
+const mesActual = ahora.getMonth() + 1;
+const diaActual = ahora.getDate();
 
-const mesActual =
-    ahora.getMonth() + 1;
-
-const diaActual =
-    ahora.getDate();
+const pawsContainer = document.getElementById("paws");
 
 
-
-/* =========================================================
-   CONTENEDOR
-========================================================= */
-
-const pawsContainer =
-    document.getElementById("paws");
-
-
-
-/* =========================================================
-   SVG DE LA HUELLITA
-========================================================= */
+/* SVG DE LA HUELLITA */
 
 function crearSVG(){
-
-
     return `
-
-        <svg
-            viewBox="0 0 100 100"
-            aria-hidden="true"
-        >
-
+        <svg viewBox="0 0 100 100" aria-hidden="true">
             <g fill="#ead0a2">
-
-
-                <!-- almohadilla -->
-
-                <ellipse
-                    cx="50"
-                    cy="61"
-                    rx="25"
-                    ry="22"
-                />
-
-
-                <!-- dedo izquierdo -->
-
-                <ellipse
-                    cx="27"
-                    cy="35"
-                    rx="11"
-                    ry="15"
-                    transform="
-                        rotate(-25 27 35)
-                    "
-                />
-
-
-                <!-- dedo superior izquierdo -->
-
-                <ellipse
-                    cx="43"
-                    cy="25"
-                    rx="11"
-                    ry="15"
-                    transform="
-                        rotate(-8 43 25)
-                    "
-                />
-
-
-                <!-- dedo superior derecho -->
-
-                <ellipse
-                    cx="59"
-                    cy="25"
-                    rx="11"
-                    ry="15"
-                    transform="
-                        rotate(8 59 25)
-                    "
-                />
-
-
-                <!-- dedo derecho -->
-
-                <ellipse
-                    cx="74"
-                    cy="36"
-                    rx="11"
-                    ry="15"
-                    transform="
-                        rotate(25 74 36)
-                    "
-                />
-
-
+                <ellipse cx="50" cy="61" rx="25" ry="22"/>
+                <ellipse cx="27" cy="35" rx="11" ry="15" transform="rotate(-25 27 35)"/>
+                <ellipse cx="43" cy="25" rx="11" ry="15" transform="rotate(-8 43 25)"/>
+                <ellipse cx="59" cy="25" rx="11" ry="15" transform="rotate(8 59 25)"/>
+                <ellipse cx="74" cy="36" rx="11" ry="15" transform="rotate(25 74 36)"/>
             </g>
-
         </svg>
-
     `;
-
 }
 
 
+/* CREAR LAS 31 HUELLITAS */
 
-/* =========================================================
-   🐾 CREAR LAS 31 HUELLITAS
+for(let dia = 1; dia <= 31; dia++){
 
-   Todas se crean desde el principio,
-   pero permanecen invisibles si todavía
-   no tienen carta.
-========================================================= */
+    const paw = document.createElement("a");
 
-for(
-    let dia = 1;
-    dia <= 31;
-    dia++
-){
-
-
-    const paw =
-        document.createElement("a");
-
-
-    paw.className =
-        "paw";
-
-
-    paw.id =
-        `paw-${dia}`;
-
+    paw.className = "paw";
+    paw.id = `paw-${dia}`;
 
     paw.innerHTML = `
-
         ${crearSVG()}
-
         <span class="paw-number">
-
             ${String(dia).padStart(2,"0")}
-
         </span>
-
     `;
 
+    const posicion = posiciones[dia];
 
-
-    /* =================================================
-       POSICIÓN ÚNICA
-    ================================================= */
-
-    const posicion =
-        posiciones[dia];
-
-
-    paw.style.left =
-        posicion[0] + "%";
-
-
-    paw.style.top =
-        posicion[1] + "%";
-
-
-
-    /* =================================================
-       ROTACIÓN ÚNICA
-    ================================================= */
+    paw.style.left = posicion[0] + "%";
+    paw.style.top = posicion[1] + "%";
 
     paw.style.setProperty(
         "--rotation",
         rotaciones[dia] + "deg"
     );
 
+    const intensidad = 0.35 + ((dia - 1) / 30) * 0.65;
 
-
-    /* =================================================
-       ✨ INTENSIDAD DE LA LUZ
-
-       Día 1  = suave
-       Día 31 = máxima
-
-       La huella nueva será progresivamente
-       más luminosa que las anteriores.
-    ================================================= */
-
-    const intensidad =
-
-        0.35 +
-
-        (
-            (dia - 1) / 30
-        ) * 0.65;
-
-
-    paw.style.setProperty(
-        "--glow",
-        intensidad
-    );
-
-
-
-    /* =================================================
-       GUARDAR EN EL CONTENEDOR
-    ================================================= */
+    paw.style.setProperty("--glow", intensidad);
 
     pawsContainer.appendChild(paw);
-
 }
 
 
+/* MOSTRAR LAS HUELLITAS DISPONIBLES */
 
-/* =========================================================
-   🐾 MOSTRAR LAS HUELLITAS
-========================================================= */
+for(let dia = 1; dia <= 31; dia++){
 
-for(
-    let dia = 1;
-    dia <= 31;
-    dia++
-){
+    const paw = document.getElementById(`paw-${dia}`);
+    const link = cartas[dia];
 
-
-    const paw =
-        document.getElementById(
-            `paw-${dia}`
-        );
-
-
-    const link =
-        cartas[dia];
-
-
-
-    /* ================================================
-       SIN LINK
-
-       La huella no existe visualmente.
-    ================================================= */
-
-    if(
-        !link ||
-        link.trim() === ""
-    ){
-
-        paw.style.display =
-            "none";
-
+    if(!link || link.trim() === ""){
+        paw.style.display = "none";
         continue;
-
     }
 
-
-
-    /* ================================================
-       NO MOSTRAR DÍAS FUTUROS
-
-       Esto funciona automáticamente
-       durante octubre.
-    ================================================= */
-
-    if(
-        mesActual === 10 &&
-        dia > diaActual
-    ){
-
-        paw.style.display =
-            "none";
-
+    if(mesActual === 10 && dia > diaActual){
+        paw.style.display = "none";
         continue;
-
     }
 
-
-
-    /* ================================================
-       CARTA DISPONIBLE
-    ================================================= */
-
-    paw.href =
-        link;
-
-
-    paw.target =
-        "_blank";
-
-
-    paw.rel =
-        "noopener noreferrer";
-
-
-    paw.style.display =
-        "block";
-
-
+    paw.href = link;
+    paw.target = "_blank";
+    paw.rel = "noopener noreferrer";
+    paw.style.display = "block";
 }
 
 
+/* SI NO ESTAMOS EN OCTUBRE, OCULTAR LAS HUELLAS */
 
-/* =========================================================
-   SI NO ESTAMOS EN OCTUBRE
+if(mesActual !== 10){
 
-   No mostrar cartas futuras.
-========================================================= */
+    for(let dia = 1; dia <= 31; dia++){
 
-if(
-    mesActual !== 10
-){
-
-    for(
-        let dia = 1;
-        dia <= 31;
-        dia++
-    ){
-
-        const paw =
-            document.getElementById(
-                `paw-${dia}`
-            );
-
+        const paw = document.getElementById(`paw-${dia}`);
 
         if(paw){
-
-            paw.style.display =
-                "none";
-
+            paw.style.display = "none";
         }
-
     }
-
 }
 
 </script>
 
-
 </body>
-</html> 
+</html>
+ 
